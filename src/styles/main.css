@@ -136,7 +136,7 @@ a:focus {
     width: 100%;
     min-height: 380px;
     text-align: center;
-    background-image: url("/images/heros/hero-image_4.jpg");
+    background-image: url("../public/images/heros/hero-image_4.jpg");
     background-position: bottom;
     background-origin: border-box;
     letter-spacing: 0em;
