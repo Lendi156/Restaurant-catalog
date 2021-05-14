@@ -1,0 +1,124 @@
+@media screen and (max-width: 579px) {
+    .header_title {
+        margin: 0.2em 36px;
+    }
+    .header_menu {
+        flex-grow: 1;
+        margin: 0.2em 36px;
+    }
+    .header {
+        height: fit-content;
+    }
+  
+    .nav {
+        z-index: 100;
+        visibility: hidden;
+        background-color: #fff;
+        width: 100vw;
+        position:absolute;
+        margin: 0;        
+        top: 0;
+
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(100vw, 0);
+        transform: translate(100vw, 0);
+
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+    }
+
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        visibility: visible;
+        transition: transform 0.3s ease;
+    }
+
+    .nav_list {
+        flex-direction: column;
+    }
+
+    .nav_item {
+        border-bottom: 1px solid #E0E0E0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero_title {
+        font-size: 40px;
+    }
+
+    .content {
+        padding: 8px 16px;
+    }
+
+    .post-item_content {
+        -webkit-line-clamp: 9;
+    }
+
+    .Testimony_content {
+        height: 170px;
+    }
+
+    .Testimony_thumbnail{
+        height: 200px;
+    }
+
+}
+
+
+@media screen and (min-width: 580px) {
+    .header_menu {
+        display: none;
+    }
+    .Testimony_thumbnail{
+        height: 300px;
+    }
+}
+
+@media screen and (min-width:700px){
+    .posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
+    }
+
+    .deskripsi {
+        font-size: 14px;
+    }
+    
+    .Testimony_content {
+        height: 170px;
+    }
+
+}
+
+@media screen and (min-width: 1120px){
+    .content {
+        padding: 16px 32px;
+    }
+
+    .posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        min-width: 0;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    main {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .limiter {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+
