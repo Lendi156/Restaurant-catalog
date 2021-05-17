@@ -43,7 +43,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
     }
 
 
@@ -55,7 +54,9 @@ body {
     flex-grow: 1;
     font-weight: 300;
     font-size: 3em;
+    line-height: 53px;
     letter-spacing: 0em;
+    vertical-align: middle;
 }
 
 .menu_container {
@@ -67,8 +68,10 @@ body {
 .header_menu {
     font-size: 32px;
     margin: 0.2em 72px;
-    width: 30px;
+    min-width: 44px;
+    line-height: 44px;
     letter-spacing: 0em;
+    text-align: center;
 }
 
 .header_menu:hover {

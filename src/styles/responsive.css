@@ -1,21 +1,21 @@
-@media screen and (max-width: 579px) {
+@media screen and (max-width: 634px) {
     .header_title {
         margin: 0.2em 36px;
     }
     .header_menu {
         flex-grow: 1;
-        margin: 0.2em 36px;
+        margin: 0.2em 28.365px 0.2em 36px;
     }
     .header {
         height: fit-content;
     }
   
     .nav {
-        z-index: 100;
+        z-index: 2;
         visibility: hidden;
         background-color: #fff;
         width: 100vw;
-        position:absolute;
+        position: absolute;
         margin: 0;        
         top: 0;
 
@@ -68,7 +68,7 @@
 }
 
 
-@media screen and (min-width: 580px) {
+@media screen and (min-width: 635px) {
     .header_menu {
         display: none;
     }
