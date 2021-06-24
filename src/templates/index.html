@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Staatliches&display=swap" rel="stylesheet"> 
+    <link rel="manifest" href="manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="/icons/icon 192x192.png">
+    <link rel="icon" href="favicon.png">
+    <meta name="theme-color" content="#424242"/>
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
     <title>Lapar.id</title>
 </head>
 <body>
     <a href="#maincontent" class="skip-link">Menuju Konten</a>
     <header class="header">
-        <h1 class="header_title">Lapar.id</h1>
         <div class="menu_container">
             <a id="menu" class="header_menu" tabindex="0" aria-expanded="false">☰</a>
         </div>
+        <h1 class="header_title">Lapar.id</h1>
         <nav id="drawer" class="nav">
             <ul class="nav_list">
-                <li class="nav_item"><a id="item" href="index.html">Home</a></li>
-                <li class="nav_item"><a id="item" href="#">Favorites</a></li>
+                <li class="nav_item"><a id="item" href="#/home">Home</a></li>
+                <li class="nav_item"><a id="item" href="#/Favorites">Favorites</a></li>
                 <li class="nav_item"><a id="item" href="https://github.com/Lendi156">About Us</a></li>
             </ul>
         </nav>
@@ -31,6 +36,8 @@
         </div>
     </div>
     <main id="maincontent">
+
+        <!--
         <section class="content">
             <h1 class="content_title">Katalog</h1>
             <div class="posts">
@@ -43,6 +50,7 @@
                         <p class="alamat">Kota : Medan</p>
                         <p class="deskripsi">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
                     </div>
+                    <button class="details">Details</button>
                 </article>
 
                 <article tabindex="0" class="post-item" aria-expanded="false">
@@ -54,6 +62,7 @@
                         <p class="alamat">Kota : Bali</p>
                         <p class="deskripsi">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
                     </div>
+                    <button class="details">Details</button>
                 </article>
 
                 <article tabindex="0" class="post-item" aria-expanded="false">
@@ -65,6 +74,7 @@
                         <p class="alamat">Kota : Ternate</p>
                         <p class="deskripsi">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
                     </div>
+                    <button class="details">Details</button>
                 </article>
 
                 <article tabindex="0" class="post-item" aria-expanded="false">
@@ -76,6 +86,7 @@
                         <p class="alamat">Kota : Malang</p>
                         <p class="deskripsi">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
                     </div>
+                    <button class="details">Details</button>
                 </article>
 
                 <article tabindex="0" class="post-item" aria-expanded="false">
@@ -87,6 +98,7 @@
                         <p class="alamat">Kota : Bali</p>
                         <p class="deskripsi">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
                     </div>
+                    <button class="details">Details</button>
                 </article>
 
                 <article tabindex="0" class="post-item" aria-expanded="false">
@@ -98,6 +110,7 @@
                         <p class="alamat">Kota : Malang</p>
                         <p class="deskripsi">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
                     </div>
+                    <button class="details">Details</button>
                 </article>
 
                 <article tabindex="0" class="post-item" aria-expanded="false">
@@ -109,6 +122,7 @@
                         <p class="alamat">Kota : Surabaya</p>
                         <p class="deskripsi">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
                     </div>
+                    <button class="details">Details</button>
                 </article>
 
                 <article tabindex="0" class="post-item" aria-expanded="false" aria-expanded="false">
@@ -120,6 +134,7 @@
                         <p class="alamat">Kota : Aceh</p>
                         <p class="deskripsi">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
                     </div>
+                    <button class="details">Details</button>
                 </article>
 
                 <article tabindex="0" class="post-item" aria-expanded="false">
@@ -131,6 +146,7 @@
                         <p class="alamat">Kota : Malang</p>
                         <p class="deskripsi">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
                     </div>
+                    <button class="details">Details</button>
                 </article>
     
             </div>
@@ -178,6 +194,8 @@
             
 
         </section>
+        -->
+
 
     </main>
     

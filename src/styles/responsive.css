@@ -49,12 +49,23 @@
         font-size: 40px;
     }
 
+    .review {
+        margin: 16px 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        padding: 16px;
+    }
+
     .content {
         padding: 8px 16px;
     }
 
     .post-item_content {
         -webkit-line-clamp: 9;
+    }
+
+    .name {
+        font-size: 16px;
     }
 
     .Testimony_content {
@@ -65,6 +76,21 @@
         height: 200px;
     }
 
+    #restaurantReview {
+        display: block;
+    }
+    #buttonContainer {
+        bottom: 16px;
+        right: 16px;
+    }
+    #addReviewButtonContainer {
+        margin-right: 16px;
+    }
+
+    .subHeadDetail {
+        font-size: 16px;
+    }
+    
 }
 
 
@@ -93,6 +119,16 @@
         height: 170px;
     }
 
+    
+}
+
+@media screen and (max-width: 1000px){
+    #detailContainer {
+        flex-direction: column;
+    }
+    #restaurantReview {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media screen and (min-width: 1120px){

@@ -20,6 +20,9 @@ body {
     overflow-x: hidden;
 }
 
+title {
+    font-family: 'Staatliches', cursive;
+}
 
 .skip-link {
     position: absolute;
@@ -217,8 +220,8 @@ article {
 
 .name {
     font-weight: 500;
-    font-size: 16px;
-    transition: 0.3s opacity;
+    font-size: 20px;
+    transition: 0.3s;
     font-weight: bold;
 }
 
@@ -243,7 +246,30 @@ article {
     overflow: hidden;
     vertical-align: top;
     font-weight: 600;
-}
+    }
+    
+.details {
+    position:relative;
+    right: 0;
+    width: 90px;
+    height: 44px;
+    margin: 0 16px 16px 16px;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    color: #424242;
+    align-self: flex-end;
+    background-color: #ffd56b;
+    border-style: none;
+    border-radius: 5px;
+    cursor:pointer;
+    }
+
+.details:hover {
+    background-color: transparent;
+    border-style: solid;
+    border-color:  #ffd56b;
+    }
 
 .post-item:hover > .post-item_content > .deskripsi {
     display: block;
@@ -275,6 +301,216 @@ article {
     font-weight: 600;
 }
 
+/*detail page*/
+.contentDetail {
+    margin: 0 16px;
+    text-align: left;
+}
+
+#content_titleDetail {
+    margin: 32px 0 16px;
+}
+
+#restaurantReview {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#detailContainer {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 5px;
+    text-align: left;
+    display: flex;
+}
+
+#post-item-detail {
+    height: fit-content;
+}
+#post-item_contentDetail {
+    padding: 16px;
+}
+
+.restaurantPoster {
+    width: 100%;
+}
+
+.subHeadDetail {
+    font-weight: 500;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 100%;
+}
+
+.deskripsiDetail {
+    margin: 4px 0 16px;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.review {
+    margin: 16px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 16px;
+}
+
+/*button*/
+.like {
+    font-size: 18px;
+    position: relative;
+    background-color: #ffd56b;
+    color: #db0000;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 55px;
+    border-style: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.add {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    position: relative;
+    background-color: #ffd56b;
+    color: black;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    letter-spacing: 0.1em;
+    border-radius: 55px;
+    border-style: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.add:hover {
+    background-color: black;
+    color:#ffffff;
+}
+
+.like:hover {
+    background-color: black;
+    color:#db0000;
+}
+
+#likeButtonContainer {
+    width: 55px;
+    height: 55px;
+}
+
+#addReviewButtonContainer {
+    height: 55px;
+    margin-right: 32px;
+}
+
+#buttonContainer {
+    display: flex;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+}
+/* input Review floating page*/
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviewOpened {
+  visibility: visible;
+}
+
+#formcontainer {
+    position: relative;
+    background-color: #ffd56b;
+    width: 634px;
+    height: 70%;
+    padding: 32px;
+    
+}
+
+.inputContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label input {
+    display: block;
+}
+
+label {
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.input {
+    height: 44px;
+    border-style: none;
+    background-color: #ffffff;
+    margin: 8px 0 16px;
+    text-indent: 12px;
+    font-size: 12px;
+}
+
+#submit {
+    border-style: none;
+    background-color: black;
+    color: #ffffff;
+    margin-bottom: 16px;
+    height: 44px;
+    cursor: pointer;
+    border-radius: 44px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+.inputBtn {
+    border-style: solid;
+    border-color: black;
+    background-color: #ffffff;
+    color: black;
+    margin-bottom: 16px;
+    height: 44px;
+    cursor: pointer;
+    border-radius: 44px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+.inputBtn:hover {
+    border-style: none;
+    background-color: black;
+    color: #ffffff;
+}
+
+#submit:hover {
+    border-style: solid;
+    border-color: black;
+    background-color: #ffffff;
+    color: black;
+}
 
 /*footer*/
 footer {
@@ -283,3 +519,4 @@ footer {
     width: 100%;
     text-align: center;
 }
+
