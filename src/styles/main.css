@@ -326,15 +326,12 @@ article {
     display: flex;
 }
 
-#post-item-detail {
-    height: fit-content;
-}
 #post-item_contentDetail {
     padding: 16px;
 }
 
 .restaurantPoster {
-    width: 100%;
+    object-fit:contain;
 }
 
 .subHeadDetail {
@@ -348,6 +345,18 @@ article {
     margin: 4px 0 16px;
     font-size: 14px;
     line-height: 1.5em;
+    
+}
+
+#deskripsiContainer {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 5px;
+    padding: 32px 16px 16px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .review {

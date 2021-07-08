@@ -7,6 +7,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <div id="post-item_contentDetail">
       <h4 class="subHeadDetail">Alamat</h4>
       <p class="deskripsiDetail">${restaurant.restaurant.address}</p>
+      <h4 class="subHeadDetail">Kota</h4>
+      <p class="deskripsiDetail">${restaurant.restaurant.city}</p>
       <h4 class="subHeadDetail">Kategori Menu</h4>
       <p class="deskripsiDetail">${restaurant.restaurant.categories.map((categories) => categories.name).join(', ')}</p>
       <h4 class="subHeadDetail">Menu Makanan</h4>
@@ -16,6 +18,11 @@ const createRestaurantDetailTemplate = (restaurant) => `
       <h4 class="subHeadDetail">Rating</h4>
       <p class="deskripsiDetail">${restaurant.restaurant.rating}</p>
     </div>
+  </div>
+
+  <div id="deskripsiContainer">
+      <h4 class="subHeadDetail">Deskripsi</h4>
+      <p class="deskripsiDetail">${restaurant.restaurant.description}</p>
   </div>
 `;
 
