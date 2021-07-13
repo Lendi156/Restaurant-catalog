@@ -1,7 +1,7 @@
 import FavoriteRestaurantIdb from '../src/scripts/Data/favoriterestaurant-idb';
 import * as TestFactories from './helpers/testFactories';
 
-describe('Liking A Resataaurant', () => {
+describe('Liking A Resataurant', () => {
   const addLikeButtonContainer = () => {
     document.body.innerHTML = '<div id="likeButtonContainer"></div>';
   };

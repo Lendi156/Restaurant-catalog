@@ -1,9 +1,10 @@
 import UrlParser from '../../Routes/url-parser';
 import restaurantsApi from '../../Data/restaurant-api';
 import { createRestaurantDetailTemplate, createRestaurantDetailReview, createAddReviewButtonTemplate } from '../templates/template-creator';
-import LikeButtonInitiator from '../../Utils/like-button-presenter';
+import LikeButtonPresenter from '../../Utils/like-button-presenter';
 import AddReviewButtonInitiator from '../../Utils/review-inputPage-initiator';
 import reviewAddedInitiator from '../../Utils/review-adder';
+import FavoriteRestaurantIdb from '../../Data/favoriterestaurant-idb';
 
 const detail = {
   async render() {
@@ -52,20 +53,21 @@ const detail = {
 
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      favoriteRestaurants: FavoriteRestaurantIdb,
       restaurant: {
         restaurant: {
-          id: restaurant.id,
-          name: restaurant.name,
-          description: restaurant.description,
-          city: restaurant.city,
-          addres: restaurant.address,
-          pictureId: restaurant.pictureId,
-          categories: restaurant.categories,
-          menus: restaurant.menus,
-          rating: restaurant.rating,
-          customerReviews: restaurant.customerReviews,
+          id: restaurant.restaurant.id,
+          name: restaurant.restaurant.name,
+          description: restaurant.restaurant.description,
+          city: restaurant.restaurant.city,
+          addres: restaurant.restaurant.address,
+          pictureId: restaurant.restaurant.pictureId,
+          categories: restaurant.restaurant.categories,
+          menus: restaurant.restaurant.menus,
+          rating: restaurant.restaurant.rating,
+          customerReviews: restaurant.restaurant.customerReviews,
         },
       },
     });
