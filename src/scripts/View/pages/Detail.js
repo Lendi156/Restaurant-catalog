@@ -1,6 +1,14 @@
 import UrlParser from '../../Routes/url-parser';
 import restaurantsApi from '../../Data/restaurant-api';
-import { createRestaurantDetailTemplate, createRestaurantDetailReview, createAddReviewButtonTemplate } from '../templates/template-creator';
+import {
+  createRestaurantDetailTemplate,
+  createRestaurantDetailReview,
+  createAddReviewButtonTemplate,
+  createSkeletonRestaurantDetailTemplate,
+  createSkeletonRestaurantDetailReview,
+  createTestimoni,
+  createSkeletonTestimoni,
+} from '../templates/template-creator';
 import LikeButtonPresenter from '../../Utils/like-button-presenter';
 import AddReviewButtonInitiator from '../../Utils/review-inputPage-initiator';
 import reviewAddedInitiator from '../../Utils/review-adder';
@@ -24,10 +32,13 @@ const detail = {
 
     <section class="contentDetail">
         <div id="postDetail">
-        
+        ${createSkeletonRestaurantDetailTemplate()}
         </div>
-        <h2 id="content_titleDetail"class="content_title">Testimoni</h2>
+        <div id="testimoni">
+        ${createSkeletonTestimoni()}
+        </div>
         <div id="restaurantReview">
+        ${createSkeletonRestaurantDetailReview(3)}
         </div>
         <div id="buttonContainer">
          <div id="addReviewButtonContainer"></div>
@@ -42,16 +53,19 @@ const detail = {
     const restaurant = await restaurantsApi.detailRestaurant(url.id);
     const restaurantContainer = document.querySelector('#postDetail');
     const custReview = restaurant.restaurant.customerReviews;
+    const restaurantReview = document.querySelector('#restaurantReview');
+    const testimoni = document.querySelector('#testimoni');
     const custRevFunc = () => {
-      const restaurantReview = document.querySelector('#restaurantReview');
       custReview.forEach((Review) => {
         restaurantReview.innerHTML += createRestaurantDetailReview(Review);
       });
     };
 
-    custRevFunc();
-
+    restaurantContainer.innerHTML = '';
+    restaurantReview.innerHTML = '';
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
+    testimoni.innerHTML = createTestimoni();
+    custRevFunc();
 
     LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
