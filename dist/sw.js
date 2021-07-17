@@ -10,6 +10,10 @@ var serviceWorkerOption = {
     "/icons/icon 512x512.png",
     "/icons/icon 72x72.png",
     "/icons/icon 96x96.png",
+    "/images/placeholder.png",
+    "/images/heros/1.jpg",
+    "/images/heros/2.jpg",
+    "/images/heros/3.jpg",
     "/images/heros/hero-image_4.jpg",
     "/index.html"
   ]

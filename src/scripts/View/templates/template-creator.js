@@ -109,7 +109,7 @@ const createRestaurantTestimoni = () => `
 <div class="posts">
     <article tabindex="0" class="post-item">
         <img class="Testimony_thumbnail" 
-        src="images/heros/rendy-novantino-yZV9ftly838-unsplash.jpg" alt="">
+        src="images/heros/1.jpg" alt="">
         <div class="Testimony_content">
             <h1 class="name">Mirna Nasution </h1>
             <p class="rating">Model</p>
@@ -121,7 +121,7 @@ const createRestaurantTestimoni = () => `
 
     <article tabindex="0" class="post-item">
         <img class="Testimony_thumbnail" 
-        src="images/heros/luigi-estuye-lucreative-CEgyvJHKN98-unsplash.jpg" alt="">
+        src="images/heros/2.jpg" alt="">
         <div class="Testimony_content">
             <h1 class="name">Adam Sutisna</h1>
             <p class="rating">Pengusaha</p>
@@ -133,7 +133,7 @@ const createRestaurantTestimoni = () => `
 
     <article tabindex="0" class="post-item" >
         <img class="Testimony_thumbnail" 
-        src="images/heros/szabo-viktor-Tm2Mz03S2j0-unsplash.jpg" alt="">
+        src="images/heros/3.jpg" alt="">
         <div class="Testimony_content">
             <h1 class="name">Chris Schelberg</h1>
             <p class="rating">Traveler dan Food Blogger</p>
