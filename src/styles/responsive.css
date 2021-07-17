@@ -1,12 +1,4 @@
 @media screen and (max-width: 634px) {
-    
-    .header_title {
-        margin: 0.2em 36px;
-    }
-    .header_menu {
-        flex-grow: 1;
-        margin: 0.2em 28.365px 0.2em 36px;
-    }
     .header {
         height: fit-content;
     }
@@ -17,8 +9,6 @@
         background-color: #fff;
         width: 100vw;
         position: absolute;
-        margin: 0;        
-        top: 0;
 
         /* This trasform moves the drawer off canvas. */
         -webkit-transform: translate(100vw, 0);
@@ -44,10 +34,6 @@
         border-bottom: 1px solid #E0E0E0;
         width: 100%;
         text-align: center;
-    }
-
-    .hero_title {
-        font-size: 40px;
     }
 
     .review {
@@ -107,7 +93,7 @@
     }
 }
 
-@media screen and (min-width:700px){
+@media screen and (min-width:500px){
     .posts {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -124,6 +110,35 @@
     }
 
     
+}
+
+@media screen and (max-width:750px){
+    .header_title {
+        margin: 0.2em 36px;
+    }
+    .header_menu {
+        flex-grow: 1;
+        margin: 0.2em 28.365px 0.2em 36px;
+    }
+    .nav{
+        margin: 0.2em 28.365px 0.2em 0px;        
+        top: 0;
+    }
+    .hero{
+        height: 250px;
+    }
+
+    .hero_title {
+        font-size: 40px;
+    }
+    
+    .hero_picture > img {
+       min-width: 100%;
+       height: auto;
+    }
+    .content_title {
+        font-size: 40px;
+    }
 }
 
 @media screen and (max-width: 1000px){
