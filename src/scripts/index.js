@@ -3,6 +3,8 @@ import '../styles/main.css';
 import '../styles/responsive.css';
 import App from './View/App';
 import swRegister from './Utils/sw-register';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 // eslint-disable-next-line no-unused-vars
 const app = new App({

@@ -160,7 +160,7 @@ const createRestaurantTestimoni = () => `
 
 const createRestaurantItemTemplate = (restaurant) => `
 <article tabindex="0" class="post-item" aria-expanded="false">
-  <img class="post-item_thumbnail" 
+  <img class="post-item_thumbnail lazyload" 
   src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
   <div class="post-item_content">
     <h1 class="name">${restaurant.name} </h1>
