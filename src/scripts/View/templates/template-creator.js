@@ -105,54 +105,42 @@ const createSkeletonRestaurantTemplate = (count) => {
 
 const createRestaurantTestimoni = () => `
 <section class="content">
-<h1 class="content_title">Testimoni</h1>
+<h1 class="content_title">Meet Our Chefs</h1>
 <div class="posts">
-    <article tabindex="0" class="post-item">
+    <article tabindex="0" id="chef" class="post-item">
+        <div class="Testimony_content">
+            <h1 class="name">Mirna Nasution </h1>
+        </div>
         <picture class="Testimony_thumbnail">
           <source media="(max-width: 600px)" srcset="./images/heros/1-small.jpg">
           <img 
             src="./images/heros/1-large.jpg" 
             alt="Photo of Mirna Nasution"></img>
         </picture>
-        <div class="Testimony_content">
-            <h1 class="name">Mirna Nasution </h1>
-            <p class="rating">Model</p>
-            <p class="deskripsi">
-                <q>Saya sering mampir ke restoran-restoran milik lapar.id dan sangat puas dengan pelayannanya</q> 
-            </p>
-        </div>
     </article>
 
-    <article tabindex="0" class="post-item">
+    <article tabindex="0" id="chef" class="post-item">
+        <div class="Testimony_content">
+            <h1 class="name">Adam Sutisna</h1>
+        </div>
         <picture class="Testimony_thumbnail">
           <source media="(max-width: 600px)" srcset="./images/heros/2-small.jpg">
           <img 
           src="./images/heros/2-large.jpg" 
           alt="Photo of Mirna Nasution"></img>
         </picture>
-        <div class="Testimony_content">
-            <h1 class="name">Adam Sutisna</h1>
-            <p class="rating">Pengusaha</p>
-            <p class="deskripsi">
-                <q>Sangat saya rekomendasikan untuk menjamu partner-partner bisnis.</q> 
-            </p>
-        </div>
     </article>
 
-    <article tabindex="0" class="post-item" >
+    <article tabindex="0" id="chef" class="post-item" >
+        <div class="Testimony_content">
+          <h1 class="name">Chris Schelberg</h1>
+        </div>
         <picture class="Testimony_thumbnail">
           <source media="(max-width: 600px)" srcset="./images/heros/3-small.jpg">
           <img 
             src="./images/heros/3-large.jpg" 
            alt="Photo of Mirna Nasution"></img>
         </picture>
-        <div class="Testimony_content">
-            <h1 class="name">Chris Schelberg</h1>
-            <p class="rating">Traveler dan Food Blogger</p>
-            <p class="deskripsi">
-                <q>Merupakan restoran pertama yang saya kunjungi ketika pertama kali di Indonesia. Tidak menyesal karena makanan yang disajikan benar-benar lezat.</q> 
-            </p>
-        </div>
     </article>
 </div>
 </section>

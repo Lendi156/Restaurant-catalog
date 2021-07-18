@@ -44,7 +44,7 @@
     }
 
     .content {
-        padding: 8px 16px;
+        padding: 16px;
     }
     .restaurantPoster {
         min-width: 100% ;
@@ -56,10 +56,6 @@
 
     .name {
         font-size: 16px;
-    }
-
-    .Testimony_content {
-        height: 170px;
     }
 
     .Testimony_thumbnail{
@@ -88,28 +84,20 @@
     .header_menu {
         display: none;
     }
-    .Testimony_thumbnail{
-        height: 300px;
-    }
+   
 }
 
 @media screen and (min-width:500px){
     .posts {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 10px;
+        grid-column-gap: 16px;
         grid-row-gap: 16px;
     }
 
     .deskripsi {
         font-size: 14px;
     }
-    
-    .Testimony_content {
-        height: 170px;
-    }
-
-    
 }
 
 @media screen and (max-width:750px){
@@ -129,7 +117,11 @@
     }
 
     .hero_title {
-        font-size: 40px;
+        font-size: 24px;
+    }
+
+    .hero_tagline {
+        font-size: 16px;
     }
     
     .hero_picture > img {
@@ -137,7 +129,19 @@
        height: auto;
     }
     .content_title {
-        font-size: 40px;
+        font-size: 24px;
+    }
+    .deskripsi {
+        font-size: 12px;
+    }
+    .rating {
+        font-size: 12px;
+    }
+    .alamat {
+        font-size: 12px;
+    }
+    .details {
+        font-size: 12px;
     }
 }
 
@@ -152,7 +156,7 @@
 
 @media screen and (min-width: 1120px){
     .content {
-        padding: 16px 32px;
+        padding: 16px 16px;
     }
 
     .posts {

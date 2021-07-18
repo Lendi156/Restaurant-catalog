@@ -166,8 +166,7 @@ a:focus {
 }
 
 .hero_title {
-    font-family: 'Staatliches', cursive;
-    font-weight: 300;
+    font-weight:bold;
     font-size: 72px;
     margin: 0 16px;
 }
@@ -190,7 +189,7 @@ main {
 */
 .content {
     width: 100%;
-    margin: 0px auto;
+    margin: 0px;
     padding: 32px;
 }
 
@@ -204,6 +203,7 @@ main {
 .posts {
     width: 100%;
     text-align: center;
+    margin-top: 16px;
 }
 
 article {
@@ -215,7 +215,7 @@ article {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
     border-radius: 5px;
-    margin: 32px auto auto;
+    margin: 16px auto auto;
     text-align: left;
 }
 
@@ -312,10 +312,14 @@ article {
 /*Testimoni*/
 
 .Testimony_thumbnail {
-    max-height: 400px;
+    height: 400px;
     width: 100%;
     position: relative;
     overflow: hidden;
+}
+
+#chef {
+    background-color: #ffd56b;
 }
 
 .Testimony_thumbnail > img {
@@ -330,8 +334,8 @@ article {
 
 .Testimony_content {
     margin: 16px;
-    height: 142.73px;
     font-weight: 600;
+    text-align: center;
 }
 
 /*detail page*/
