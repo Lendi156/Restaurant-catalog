@@ -177,6 +177,10 @@ const createAddReviewButtonTemplate = () => `
      TAMBAH TESTIMONI
   </button>
 `;
+
+const getEmptyRestaurantTemplate = () => `
+    <h2 class="post-item__not__found">Tidak ada restaurant yang disukai</h2>
+  `;
 // eslint-disable-next-line import/prefer-default-export
 export {
   createRestaurantItemTemplate,
@@ -191,6 +195,7 @@ export {
   createSkeletonRestaurantDetailReview,
   createTestimoni,
   createSkeletonTestimoni,
+  getEmptyRestaurantTemplate,
 };
 
 /*
