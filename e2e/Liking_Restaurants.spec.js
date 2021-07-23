@@ -10,10 +10,10 @@ Scenario('showing empty liked restaurant', ({ I }) => {
   I.see('Favorites', '.content_title');
 });
 
-Scenario('liking one movie', async({ I }) => {
+Scenario('liking one restaurant', async({ I }) => {
   I.see('Favorites', '.content_title');
-  pause();
   I.amOnPage('/');
+  I.wait(4);
 
   I.seeElement('.details');
   const firstRestaurant = locate('.name').first();
@@ -22,20 +22,23 @@ Scenario('liking one movie', async({ I }) => {
   I.click(locate('.details').first());
   I.click(locate('.details').first());
 
+  I.wait(4);
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
   I.amOnPage('/#/Favorites');
+  I.wait(4);
   I.seeElement('.post-item');
-
+ 
   const likedRestarantTitle = await I.grabTextFrom('.name');
   assert.strictEqual(firstRestaurantTitle, likedRestarantTitle);
 });
 
-Scenario('unliking one movie', async({ I }) => {
+Scenario('unliking restaurant', async({ I }) => {
   I.see('Favorites', '.content_title');
 
   I.amOnPage('/');
+  I.wait(4);
 
   I.seeElement('.details');
   const firstRestaurant = locate('.name').first();
@@ -48,6 +51,7 @@ Scenario('unliking one movie', async({ I }) => {
   I.click('#likeButton');
 
   I.amOnPage('/#/Favorites');
+  I.wait(4);
   I.seeElement('.post-item');
 
   const likedRestarantTitle = await I.grabTextFrom('.name');
@@ -60,5 +64,6 @@ Scenario('unliking one movie', async({ I }) => {
   I.click('#likeButton');
 
   I.amOnPage('/#/Favorites');
+  I.wait(4);
   I.seeElement('.post-item__not__found');
 });
