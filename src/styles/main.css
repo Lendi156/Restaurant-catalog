@@ -351,6 +351,7 @@ article {
 .contentDetail {
     margin: 0 16px;
     text-align: left;
+    position: relative;
 }
 
 #content_titleDetail {
@@ -469,9 +470,10 @@ article {
 
 #buttonContainer {
     display: flex;
-    position: fixed;
+    position: sticky;
     bottom: 32px;
     right: 32px;
+    justify-content: flex-end;
 }
 /* input Review floating page*/
 .overlay {
@@ -574,6 +576,7 @@ footer {
     padding: 2em;
     width: 100%;
     text-align: center;
+    margin-top: 32px;
 }
 
 .skeleton {

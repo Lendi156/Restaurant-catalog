@@ -58,7 +58,6 @@ Scenario('unliking restaurant', async({ I }) => {
   assert.strictEqual(firstRestaurantTitle, likedRestarantTitle);
 
   I.click(locate('.details').first());
-  I.click(locate('.details').first());
 
   I.seeElement('#likeButton');
   I.click('#likeButton');
