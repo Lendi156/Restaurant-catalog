@@ -10,13 +10,19 @@ const reviewAddedInitiator = {
 
   _reviewButton(restaurant, name, reviewDesc, inputReview, submitReview) {
     submitReview.addEventListener('click', () => {
-      const newReview = {
-        id: `${restaurant.restaurant.id}`,
-        name: name.value,
-        review: reviewDesc.value,
-      };
-      inputReview.classList.remove('reviewOpened');
-      restaurantsApi.addreview(newReview);
+      if (navigator.onLine) {
+        const newReview = {
+          id: `${restaurant.restaurant.id}`,
+          name: name.value,
+          review: reviewDesc.value,
+        };
+        inputReview.classList.remove('reviewOpened');
+        restaurantsApi.addreview(newReview);
+      } else {
+        // eslint-disable-next-line no-alert
+        alert('Tidak bisa menambahkan reviewsaat offline');
+        inputReview.classList.remove('reviewOpened');
+      }
     });
   },
 

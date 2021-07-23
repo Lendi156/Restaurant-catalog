@@ -1,19 +1,19 @@
 /* eslint-disable no-underscore-dangle */
 import drawerInitiator from '../Utils/drawer-initiator';
-import postInitiator from '../Utils/post-initator';
+import restaurantPostInitiator from '../Utils/restaurantPost-initator';
 import UrlParser from '../Routes/url-parser';
 import routes from '../Routes/Routes';
 
 class App {
   constructor({
-    menu, hero, main, drawer, item, post,
+    menu, hero, main, drawer, item, restaurantPost,
   }) {
     this._menu = menu;
     this._item = item;
     this._main = main;
     this._hero = hero;
     this._drawer = drawer;
-    this._post = post;
+    this._restaurantPost = restaurantPost;
 
     this._initialAppShell();
     this._initialPostInitiator();
@@ -31,8 +31,8 @@ class App {
   }
 
   _initialPostInitiator() {
-    postInitiator.initPost({
-      post: this._post,
+    restaurantPostInitiator.initRestaurantPost({
+      restaurantPost: this._restaurantPost,
       main: this._main,
     });
   }

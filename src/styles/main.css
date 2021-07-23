@@ -200,7 +200,7 @@ main {
     text-align: center;
 }
 
-.posts {
+.restaurantPosts {
     width: 100%;
     text-align: center;
     margin-top: 16px;
@@ -212,7 +212,7 @@ article {
     flex-direction: column;
 }
 
-.post-item {
+.restaurantPost-item {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
     border-radius: 5px;
@@ -220,7 +220,7 @@ article {
     text-align: left;
 }
 
-.post-item_thumbnail {
+.restaurantPost-item_thumbnail {
     height: 210px;
     object-fit: cover;
     width: 100%;
@@ -229,12 +229,12 @@ article {
 }
 
 
-.post-item_content {
+.restaurantPost-item_content {
     margin: 16px;
     height: fit-content;
 }
 
-.post-item .post-item_thumbnail .post-item_content {
+.restaurantPost-item .restaurantPost-item_thumbnail .restaurantPost-item_content {
     object-position: center;
     object-fit: cover;
     min-width: 100%;
@@ -294,7 +294,7 @@ article {
     border-color:  #ffd56b;
     }
 
-.post-item:hover > .post-item_content > .deskripsi {
+.restaurantPost-item:hover > .restaurantPost-item_content > .deskripsi {
     display: block;
     overflow: visible;
     height: fit-content;
@@ -310,7 +310,7 @@ article {
     text-overflow: clip;
 }
 
-.post-item__not__found {
+.restaurantPost-item__not__found {
     font-size: 24px;
     font-weight: normal;
     text-align: center;
@@ -371,7 +371,7 @@ article {
     display: flex;
 }
 
-#post-item_contentDetail {
+#restaurantPost-item_contentDetail {
     padding: 16px;
 }
 

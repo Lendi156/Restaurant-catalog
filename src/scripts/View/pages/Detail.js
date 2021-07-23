@@ -31,7 +31,7 @@ const detail = {
     </div>
 
     <section class="contentDetail">
-        <div id="postDetail">
+        <div id="restaurantDetail">
         ${createSkeletonRestaurantDetailTemplate()}
         </div>
         <div id="testimoni">
@@ -51,7 +51,7 @@ const detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await restaurantsApi.detailRestaurant(url.id);
-    const restaurantContainer = document.querySelector('#postDetail');
+    const restaurantContainer = document.querySelector('#restaurantDetail');
     const custReview = restaurant.restaurant.customerReviews;
     const restaurantReview = document.querySelector('#restaurantReview');
     const testimoni = document.querySelector('#testimoni');

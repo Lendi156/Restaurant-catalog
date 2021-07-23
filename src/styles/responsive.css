@@ -50,7 +50,7 @@
         min-width: 100% ;
     }
 
-    .post-item_content {
+    .restaurantPost-item_content {
         -webkit-line-clamp: 9;
     }
 
@@ -91,7 +91,7 @@
 }
 
 @media screen and (min-width:500px){
-    .posts {
+    .restaurantPosts {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 16px;
@@ -127,7 +127,7 @@
         font-size: 16px;
     }
 
-    .post-item__not__found {
+    .restaurantPost-item__not__found {
         font-size: 16px; 
     }
     
@@ -166,7 +166,7 @@
         padding: 16px 16px;
     }
 
-    .posts {
+    .restaurantPosts {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         min-width: 0;

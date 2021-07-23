@@ -1,13 +1,13 @@
 /* eslint-disable no-underscore-dangle */
 
-const postInitiator = {
-  initPost({ post, main }) {
-    this._expandPost(post, main);
+const restaurantPostInitiator = {
+  initRestaurantPost({ restaurantPost, main }) {
+    this._expandRestaurantPost(restaurantPost, main);
   },
 
-  _expandPost(post, main) {
-    post.forEach((pos) => {
-      const deskripsi = pos.querySelector('.post-item_content > .deskripsi');
+  _expandRestaurantPost(restaurantPost, main) {
+    restaurantPost.forEach((pos) => {
+      const deskripsi = pos.querySelector('.restaurantPost-item_content > .deskripsi');
       pos.addEventListener('keyup', (event) => {
         if (event.keyCode === 9) {
           deskripsi.classList.add('deskripsi_new');
@@ -39,4 +39,4 @@ const postInitiator = {
   },
 };
 
-export default postInitiator;
+export default restaurantPostInitiator;

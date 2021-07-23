@@ -4,7 +4,7 @@ const createSkeletonRestaurantDetailTemplate = () => `
   <h2 id="content_titleDetail"class="content_title skeleton">Lorem ipsum.</h2>
   <div id="detailContainer">
     <img class="restaurantPoster" src="./images/placeholder.png"/>
-    <div id="post-item_contentDetail">
+    <div id="restaurantPost-item_contentDetail">
       <h4 class="subHeadDetail skeleton">Alamat</h4>
       <p class="deskripsiDetail skeleton">Lorem ipsum dolor sit.</p>
       <h4 class="subHeadDetail skeleton">Kota</h4>
@@ -30,7 +30,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <h2 id="content_titleDetail"class="content_title">${restaurant.restaurant.name}</h2>
   <div id="detailContainer">
     <img class="restaurantPoster" src="${CONFIG.BASE_IMAGE_URL + restaurant.restaurant.pictureId}" alt="${restaurant.restaurant.name}" />
-    <div id="post-item_contentDetail">
+    <div id="restaurantPost-item_contentDetail">
       <h4 class="subHeadDetail">Alamat</h4>
       <p class="deskripsiDetail">${restaurant.restaurant.address}</p>
       <h4 class="subHeadDetail">Kota</h4>
@@ -88,9 +88,9 @@ const createSkeletonRestaurantTemplate = (count) => {
 
   for (let i = 0; i < count; i += 1) {
     template += `
-      <article tabindex="0" class="post-item" aria-expanded="false">
-        <img class="post-item_thumbnail" width="100%" height="350px" src="./images/placeholder.png">
-        <div class="post-item_content">
+      <article tabindex="0" class="restaurantPost-item" aria-expanded="false">
+        <img class="restaurantPost-item_thumbnail" width="100%" height="350px" src="./images/placeholder.png">
+        <div class="restaurantPost-item_content">
           <h1 class="name skeleton">Lorem ipsum dolor sit. </h1>
           <p class="rating skeleton">Lorem ipsum dolor sit. </p>
           <p class="alamat skeleton">Lorem ipsum dolor sit. </p>
@@ -106,8 +106,8 @@ const createSkeletonRestaurantTemplate = (count) => {
 const createRestaurantTestimoni = () => `
 <section class="content">
 <h1 class="content_title">Meet Our Chefs</h1>
-<div class="posts">
-    <article tabindex="0" id="chef" class="post-item">
+<div class="restaurantPosts">
+    <article tabindex="0" id="chef" class="restaurantPost-item">
         <div class="Testimony_content">
             <h1 class="name">Mirna Nasution </h1>
         </div>
@@ -120,7 +120,7 @@ const createRestaurantTestimoni = () => `
         </picture>
     </article>
 
-    <article tabindex="0" id="chef" class="post-item">
+    <article tabindex="0" id="chef" class="restaurantPost-item">
         <div class="Testimony_content">
             <h1 class="name">Adam Sutisna</h1>
         </div>
@@ -133,7 +133,7 @@ const createRestaurantTestimoni = () => `
         </picture>
     </article>
 
-    <article tabindex="0" id="chef" class="post-item" >
+    <article tabindex="0" id="chef" class="restaurantPost-item" >
         <div class="Testimony_content">
           <h1 class="name">Chris Schelberg</h1>
         </div>
@@ -150,10 +150,10 @@ const createRestaurantTestimoni = () => `
 `;
 
 const createRestaurantItemTemplate = (restaurant) => `
-<article tabindex="0" class="post-item" aria-expanded="false">
-  <img class="post-item_thumbnail lazyload" 
+<article tabindex="0" class="restaurantPost-item" aria-expanded="false">
+  <img class="restaurantPost-item_thumbnail lazyload" 
   data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
-  <div class="post-item_content">
+  <div class="restaurantPost-item_content">
     <h1 class="name">${restaurant.name} </h1>
     <p class="rating">Rating : ${restaurant.rating}</p>
     <p class="alamat">Kota : ${restaurant.city}</p>
@@ -182,7 +182,7 @@ const createAddReviewButtonTemplate = () => `
 `;
 
 const getEmptyRestaurantTemplate = () => `
-    <h2 class="post-item__not__found">Tidak ada restaurant yang disukai</h2>
+    <h2 class="restaurantPost-item__not__found">Tidak ada restaurant yang disukai</h2>
   `;
 // eslint-disable-next-line import/prefer-default-export
 export {

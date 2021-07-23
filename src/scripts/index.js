@@ -13,7 +13,7 @@ const app = new App({
   main: document.querySelector('main'),
   drawer: document.querySelector('#drawer'),
   item: document.querySelectorAll('#item'),
-  post: document.querySelectorAll('.post-item'),
+  restaurantPost: document.querySelectorAll('.post-item'),
 });
 
 window.addEventListener('hashchange', () => {
