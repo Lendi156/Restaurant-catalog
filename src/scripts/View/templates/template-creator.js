@@ -114,7 +114,8 @@ const createRestaurantTestimoni = () => `
         <picture class="Testimony_thumbnail">
           <source media="(max-width: 600px)" srcset="./images/heros/1-small.jpg">
           <img 
-            src="./images/heros/1-large.jpg" 
+            class="lazyload"
+            data-src="./images/heros/1-large.jpg" 
             alt="Photo of Mirna Nasution"></img>
         </picture>
     </article>
@@ -126,7 +127,8 @@ const createRestaurantTestimoni = () => `
         <picture class="Testimony_thumbnail">
           <source media="(max-width: 600px)" srcset="./images/heros/2-small.jpg">
           <img 
-          src="./images/heros/2-large.jpg" 
+          class="lazyload"
+          data-src="./images/heros/2-large.jpg" 
           alt="Photo of Mirna Nasution"></img>
         </picture>
     </article>
@@ -138,7 +140,8 @@ const createRestaurantTestimoni = () => `
         <picture class="Testimony_thumbnail">
           <source media="(max-width: 600px)" srcset="./images/heros/3-small.jpg">
           <img 
-            src="./images/heros/3-large.jpg" 
+           class="lazyload"
+           data-src="./images/heros/3-large.jpg" 
            alt="Photo of Mirna Nasution"></img>
         </picture>
     </article>
@@ -149,7 +152,7 @@ const createRestaurantTestimoni = () => `
 const createRestaurantItemTemplate = (restaurant) => `
 <article tabindex="0" class="post-item" aria-expanded="false">
   <img class="post-item_thumbnail lazyload" 
-  src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
+  data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
   <div class="post-item_content">
     <h1 class="name">${restaurant.name} </h1>
     <p class="rating">Rating : ${restaurant.rating}</p>
