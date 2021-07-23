@@ -11,7 +11,7 @@ const home = {
     return `
     <section class="content">
       <h1 class="content_title">Katalog</h1>
-      <div id="restaurantPosts" class="restaurantPosts">${createSkeletonRestaurantTemplate(20)}</div>
+      <div id="restaurantPosts" class="restaurantPosts" aria-label="restaurantPosts">${createSkeletonRestaurantTemplate(20)}</div>
     </section>
     ${createRestaurantTestimoni()}
       `;

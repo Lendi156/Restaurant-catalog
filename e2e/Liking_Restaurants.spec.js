@@ -28,7 +28,7 @@ Scenario('liking one restaurant', async({ I }) => {
 
   I.amOnPage('/#/Favorites');
   I.wait(4);
-  I.seeElement('.post-item');
+  I.seeElement('.restaurantPost-item');
  
   const likedRestarantTitle = await I.grabTextFrom('.name');
   assert.strictEqual(firstRestaurantTitle, likedRestarantTitle);
@@ -52,7 +52,7 @@ Scenario('unliking restaurant', async({ I }) => {
 
   I.amOnPage('/#/Favorites');
   I.wait(4);
-  I.seeElement('.post-item');
+  I.seeElement('.restaurantPost-item');
 
   const likedRestarantTitle = await I.grabTextFrom('.name');
   assert.strictEqual(firstRestaurantTitle, likedRestarantTitle);
@@ -64,5 +64,5 @@ Scenario('unliking restaurant', async({ I }) => {
 
   I.amOnPage('/#/Favorites');
   I.wait(4);
-  I.seeElement('.post-item__not__found');
+  I.seeElement('.restaurantPost-item__not__found');
 });
