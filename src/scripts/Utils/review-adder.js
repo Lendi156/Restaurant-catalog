@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import restaurantsApi from '../Data/restaurant-api';
+import { createRestaurantDetailReview } from '../View/templates/template-creator';
 
 const reviewAddedInitiator = {
   initAddReview({
@@ -17,7 +18,19 @@ const reviewAddedInitiator = {
           review: reviewDesc.value,
         };
         inputReview.classList.remove('reviewOpened');
-        restaurantsApi.addreview(newReview);
+
+        const addingReview = async () => {
+          const restaurantNew = await restaurantsApi.addreview(newReview);
+          const custReview = restaurantNew.customerReviews;
+          const lastReview = custReview[custReview.length - 1];
+          const restaurantReview = document.querySelector('#restaurantReview');
+          const custRevFunc = () => {
+            restaurantReview.innerHTML += createRestaurantDetailReview(lastReview);
+          };
+          custRevFunc();
+        };
+
+        addingReview();
       } else {
         // eslint-disable-next-line no-alert
         alert('Tidak bisa menambahkan reviewsaat offline');

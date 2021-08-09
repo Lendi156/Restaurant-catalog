@@ -22,6 +22,7 @@ class restaurantsApi {
       body: JSON.stringify(newReview),
     });
     await fetch(API_ENDPOINT.DETAIL(newReview.id));
+    await fetch(API_ENDPOINT.DETAIL(newReview.id));
     return response.json();
   }
 }
