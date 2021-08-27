@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 const drawerInitiator = {
   initDraw({
-    menu, hero, main, drawer, item,
+    menu, nav, main, drawer, item,
   }) {
     menu.addEventListener('click', (event) => {
       this._clickToOpenDrawer(event, drawer, menu);
@@ -18,7 +18,7 @@ const drawerInitiator = {
       });
     }
 
-    hero.addEventListener('click', () => {
+    nav.addEventListener('click', () => {
       this._clickHeroToCloseDrawer(drawer, menu);
     });
 

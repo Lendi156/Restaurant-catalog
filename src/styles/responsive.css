@@ -1,6 +1,177 @@
+/* Tab */
+@media screen and (max-width: 769px) {
+    .header {
+        padding: 0 50px;
+    }
+
+    .header_container {
+        height: 59px;
+    }
+
+    .header_title {
+        font-size: 33.2px;
+    }
+
+
+    .nav_item {
+        font-size: 18.7px;
+        line-height: 44px;
+    }
+
+    .hero_tagline {
+        font-size: 14px;
+        margin-top: 16px;
+    }
+
+    .hero_title {
+        font-size: 58.9px;
+    }
+
+    .hero {
+        padding: 0 50px;
+        height: 340px;
+    }
+
+    .hero_content {
+        margin-top: 71px;
+    }
+
+    .aboutContainer {
+        grid-template: auto 1fr / 1fr;
+    }
+
+    .aboutContainer .deskripsi {
+        margin-left: 0px;
+    }
+
+    .content {
+        margin: 0 50px;
+        padding: 64px 0 0 0;
+    }
+
+    .content_title {
+        font-size: 33.2px;
+    }
+
+    .deskripsi {
+        font-size: 14px;
+    }
+
+    .restaurantPost-item_thumbnail {
+        height: 25vh;
+    }
+
+    .add {
+        font-size: 14px;
+    }
+
+    .alamat {
+        font-size: 10.5px;
+    }
+
+    .splide__slide .restaurantPost-item .name {
+        font-size: 14px;
+    }
+
+    footer {
+        margin: 32px 50px 0;
+    }
+
+    footer p{
+        font-size: 14px;
+    }
+
+    #detailContainer {
+        display: block;
+    }
+
+    #restaurantPost-item_contentDetail {
+        margin-top: 64px;
+        padding: 0px;
+    }
+
+    .mainNonHome {
+        margin-top: 123px;
+    }
+
+    .testimoni {
+        margin-top: 64px;
+    }
+
+    .kategori {
+        font-size: 14px;
+    }
+
+    .like {
+        font-size: 14px;
+    }
+
+    .deskripsiDetail {
+        font-size: 14px;
+    }
+
+    .subHeadDetail {
+        font-size: 24.9px;
+    }
+
+    h3 {
+        font-size: 18.7px;
+    }
+
+    .menuDetail {
+        font-size: 14px;
+    }
+
+    #likeButtonContainer {
+        margin-right: 8px;
+    }
+
+    label {
+        font-size: 18.7px;
+    }
+
+    .input {
+        font-size: 14px;
+    }
+}
+
+
 @media screen and (max-width: 634px) {
     .header {
-        height: fit-content;
+        padding: 0 25px;
+    }
+
+    .header_container {
+        height: 55px;
+    }
+
+    .hero{
+        height: 250px;
+        padding: 0 25px;
+    }
+
+    .header_title {
+        font-size: 24.2px;
+    }
+
+    .nav_item {
+        font-size: 24.2px;
+        width: 100%;
+        text-align: center;
+        display: unset;
+        margin: 14px 0;
+    }
+
+    .mainNonHome {
+        margin-top: 87px;
+    }
+
+    .hero_tagline {
+        font-size: 14px;
+    }
+
+    .hero_title {
+        font-size: 34.8px;
     }
   
     .nav {
@@ -9,7 +180,13 @@
         background-color: #fff;
         width: 100vw;
         position: absolute;
-
+        display: flex;
+        height: 100vh;
+        margin: 0;
+        top: 0;
+        left: 0;
+        align-items: center;
+        background-color: #AB7949;
         /* This trasform moves the drawer off canvas. */
         -webkit-transform: translate(100vw, 0);
         transform: translate(100vw, 0);
@@ -30,26 +207,23 @@
         flex-direction: column;
     }
 
-    .nav_item {
-        border-bottom: 1px solid #E0E0E0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .review {
-        margin: 16px 0;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        padding: 16px;
+    #item {
+        color: white;
     }
 
     .content {
-        padding: 16px;
-    }
-    .restaurantPoster {
-        min-width: 100% ;
+        padding: 32px 0 0 0;
+        margin: 0 25px;
     }
 
+    .content_title {
+        font-size: 24.2px;
+    }
+
+    .restaurantPost-item_thumbnail {
+        height: 20vh;
+    }
+ 
     .restaurantPost-item_content {
         -webkit-line-clamp: 9;
     }
@@ -58,30 +232,60 @@
         font-size: 16px;
     }
 
-    .Testimony_thumbnail{
-        height: 200px;
-    }
-
     #restaurantReview {
         display: block;
     }
-    #buttonContainer {
-        bottom: 16px;
-        right: 16px;
-    }
+    
     #addReviewButtonContainer {
         margin-right: 16px;
     }
 
     .subHeadDetail {
-        font-size: 16px;
+        font-size: 20.2px;
     }
     
+    .restaurantPosts {
+        grid-template-columns: 1fr;
+    }
+
+    .alamat {
+        font-size: 11.7px;
+    }
+
     footer {
+        margin: 32px 25px 0;
+    }
+
+    h3 {
+        font-size: 16.8px;
+    }
+
+    #buttonContainer {
         margin-top: 16px;
     }
-}
 
+    .restaurantMenu {
+        display: block;
+    }
+
+    .makanan {
+        margin: 0;
+    }
+
+    .minuman {
+        margin: 16px 0 0;
+    }
+
+    #formcontainer {
+        height: 100%;
+        padding: 87px 32px 32px;
+    }
+
+    label {
+        font-size: 16.8px;
+    }
+
+}
 
 @media screen and (min-width: 635px) {
     .header_menu {
@@ -90,101 +294,23 @@
    
 }
 
-@media screen and (min-width:500px){
-    .restaurantPosts {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 16px;
-        grid-row-gap: 16px;
-    }
-
-    .deskripsi {
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width:750px){
-    .header_title {
-        margin: 0.2em 36px;
-    }
-    .header_menu {
-        flex-grow: 1;
-        margin: 0.2em 28.365px 0.2em 36px;
-    }
-    .nav{
-        margin: 0.2em 28.365px 0.2em 0px;        
-        top: 0;
-    }
-    .hero{
-        height: 250px;
-    }
-
+@media screen and (max-width: 390px) {
     .hero_title {
-        font-size: 24px;
+        font-size: 24.2px;
     }
 
-    .hero_tagline {
-        font-size: 16px;
-    }
-
-    .restaurantPost-item__not__found {
-        font-size: 16px; 
-    }
-    
-    .hero_picture > img {
-       min-width: 100%;
-       height: auto;
-    }
-    .content_title {
-        font-size: 24px;
-    }
-    .deskripsi {
-        font-size: 12px;
-    }
-    .rating {
-        font-size: 12px;
-    }
-    .alamat {
-        font-size: 12px;
-    }
-    .details {
-        font-size: 12px;
+    .restaurantPost-item_content_button {
+        gap: 0;
     }
 }
 
-@media screen and (max-width: 1000px){
-    #detailContainer {
-        flex-direction: column;
-    }
-    #restaurantReview {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media screen and (min-width: 1120px){
-    .content {
-        padding: 16px 16px;
-    }
-
-    .restaurantPosts {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        min-width: 0;
-    }
-
-}
-
-@media screen and (min-width: 1200px){
-    main {
-        max-width: 1200px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1500px) {
     .limiter {
-        max-width: 1440px;
+        max-width: 1300px;
         margin: 0 auto;
     }
 }
+
+
 
 

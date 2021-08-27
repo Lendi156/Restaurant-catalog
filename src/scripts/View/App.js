@@ -6,12 +6,12 @@ import routes from '../Routes/Routes';
 
 class App {
   constructor({
-    menu, hero, main, drawer, item, restaurantPost,
+    menu, nav, main, drawer, item, restaurantPost,
   }) {
     this._menu = menu;
     this._item = item;
     this._main = main;
-    this._hero = hero;
+    this._nav = nav;
     this._drawer = drawer;
     this._restaurantPost = restaurantPost;
 
@@ -23,10 +23,19 @@ class App {
   _initialAppShell() {
     drawerInitiator.initDraw({
       menu: this._menu,
-      hero: this._hero,
+      nav: this._nav,
       main: this._main,
       drawer: this._drawer,
       item: this._item,
+    });
+    document.body.addEventListener('scroll', () => {
+      const tes = document.body.scrollTop;
+      const head = document.querySelector('.header');
+      if (tes !== 0) {
+        head.style.top = '-100px';
+      } else {
+        head.style.top = '0px';
+      }
     });
   }
 

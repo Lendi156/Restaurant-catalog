@@ -14,9 +14,11 @@ body, html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    line-height: 130%;
     letter-spacing: 0.1em;
-    font-size: 14px;
+    font-size: 16px;
     color: #424242;
     position: relative;
     overflow-x: hidden;
@@ -43,22 +45,36 @@ title {
 */
 
 .header {
+    position: fixed;
+    z-index: 2;
     width: 100%;
-    background-color: #ffd56b;
+    padding: 0 100px;
+}
+
+.header_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    }
+    opacity: 100%;
+    height: 97px;
+    border-bottom: 2px solid whitesmoke;
+}
 
+.home {
+    color: whitesmoke;
+}
+
+.nonHome {
+    color: black;
+}
 
 
 .header_title {
-    font-family: 'Staatliches', cursive;
+    font-family: 'Dosis', sans-serif;
     display: inline-block;
-    margin: 0.2em 72px;
-    flex-grow: 1;
-    font-weight: 300;
-    font-size: 3em;
+    margin: 0.2em 0px;
+    font-weight: 500;
+    font-size: 37.9px;
     line-height: 53px;
     letter-spacing: 0em;
     vertical-align: middle;
@@ -70,12 +86,13 @@ title {
 }
 
 .header_menu {
-    font-size: 32px;
-    margin: 0.2em 72px;
+    font-size: 22.4px;
     min-width: 44px;
     line-height: 44px;
     letter-spacing: 0em;
-    text-align: center;
+    text-align: right;
+    background-color: transparent;
+    border: none;
 }
 
 .header_menu:hover {
@@ -84,18 +101,11 @@ title {
     color:whitesmoke;
 }
 
-.header_menu:focus {
-    text-decoration: none;
-    background-color: black;
-    color:whitesmoke;
-    padding: 0;  
-}
-
 .nav {
     display: inline-block;
     text-align: center;
     flex-grow: 3;
-    margin: 0.2em 72px 0.2em;
+    margin: 0.2em 0px;
 }
 
 .nav_list {
@@ -107,31 +117,34 @@ title {
 }
 
 .nav_item {
-    display: inline-block;
-    width: 120px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 21.3px;
+    display: flex;
     text-align:center;
-    line-height: 44px;
-    text-transform: uppercase;
+    line-height: 85px;
+    margin-top: 12px;
 }
 
 .nav a {
-    display: block;
+    display:block;
     text-decoration: none;
-    color: black;
     font-weight:bold;
+    margin: 0;
+    padding: 0 18px;
+}
+
+.line_content_title {
+    position: relative;
+    border-top: 2px solid #AB7949;
     width: 100%;
+    margin-top: 16px;
 }
 
-.nav a:hover {
-    background-color: black;
-    color:whitesmoke;
-   
-}
-
-a:focus {
-    background-color: black;
-    color:whitesmoke;
-    outline: none;
+.menuLine {
+    position: absolute;
+    z-index: 4;
+    top: 100px;
 }
 
 /*Jumbotron
@@ -139,98 +152,173 @@ a:focus {
 
 .hero {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 0;
     width: 100%;
-    height: 380px;
+    height: 490px;
     letter-spacing: 0em;
     position: relative;
     text-align: center;
     margin: 0 auto;
+    padding: 0 100px;
     color: #ffffff;
-    overflow-y: hidden ;
+    background-color: #eeeeee;
+    overflow-y: hidden;
 }
+
 
 .hero_picture {
    width: 100%;
    height: 100%;
-   position: relative;
+   z-index: 1;
+   position: absolute;
    overflow: hidden;
+   object-fit: cover;
+   left: 0;
 }
 
 .hero_content {
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: 2;
+    position: relative;
+    margin-top: 133px;
 }
 
 .hero_title {
-    font-weight:bold;
-    font-size: 72px;
-    margin: 0 16px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    font-size: 67.3px;
+    text-align: left;
+    line-height: 130%;
 }
 
 .hero_tagline {
-    font-weight: 300;
-    font-size: 18px;
-    margin: 0 16px;
+    font-family: 'Merriweather', serif;
+    line-height: 130%;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 36px;
 }
 
 /*main
 */
 main {
-    width: 100%;
-    margin: 0 auto;
     min-height: 650px;
+    position: relative;
+    top: 0;
+}
+
+.mainHome {
+  margin-top: 0px;
+}
+
+.mainNonHome {
+    margin-top: 161px;
+}
+
+.mainNonHome .content {
+    padding: 0;
 }
 
 /*Content
 */
 .content {
-    width: 100%;
-    margin: 0px;
-    padding: 32px;
+    margin: 0 100px;
+    padding: 124px 0 0 0;
 }
 
 .content_title {
+    font-family: 'Lato', sans-serif;
     letter-spacing: 0em;
-    font-size: 48px;
-    font-weight: bolder;
-    text-align: center;
+    font-size: 37.9px;
+    font-weight: 700;
+    text-align: left;
+    color: #AB7949;
+    line-height: 100%;
+}
+
+
+.aboutContainer {
+    display: grid;
+    grid-template: 1fr / 3fr 2fr;
+    overflow-x: hidden;
+}
+
+.aboutContainer .deskripsi{
+    margin-left: 36px;
+    -webkit-box-orient: unset;
+    margin-top: 24px;
+    height: fit-content;
+}
+
+.aboutPicture img {
+    object-fit: cover;
+}
+
+.content > .deskripsi {
+    margin-top: 24px;
 }
 
 .restaurantPosts {
     width: 100%;
     text-align: center;
-    margin-top: 16px;
+    margin-top: 36px;
     position: relative;
-}
-
-article {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 36px;
+    grid-row-gap: 36px;
 }
 
 .restaurantPost-item {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 100%;
-    border-radius: 5px;
-    margin: 16px auto auto;
+    display: flex;
+    flex-direction: column;
     text-align: left;
 }
 
+.restaurantPost-item .name {
+    font-size: 21.33px;
+    color: #AB7949;
+    margin-bottom: 8px;
+}
+
+.restaurantPost-item_header {
+    position: relative;
+}
+
 .restaurantPost-item_thumbnail {
-    height: 210px;
     object-fit: cover;
     width: 100%;
+    height: 35vh;
     background-color: #eeeeee;
     color: #eeeeee;
 }
 
+.restaurantPost-item_header_rating {
+    position: absolute;
+    padding: 8px;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    background-color: white;
+}
+
+.restaurantPost-item_header_rating i {
+    color: #AB7949;
+}
+
+.restaurantPost-item_content_button {
+    display: flex;
+    gap: 15px;
+}
+
+.restaurantPost-item_content_button .add {
+    align-self: flex-end;
+}
 
 .restaurantPost-item_content {
-    margin: 16px;
     height: fit-content;
 }
 
@@ -242,7 +330,7 @@ article {
 }
 
 .name {
-    font-weight: 500;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     transition: 0.3s;
     font-weight: bold;
@@ -256,48 +344,45 @@ article {
 .alamat {
     margin-top: 4px;
     font-weight: lighter;
+    font-size: 12px;
+    opacity: 70%;
 }
 
 .deskripsi {
     display: -webkit-box;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6;
-    margin-top: 16px;
-    font-size: 14px;
-    line-height: 1.5em;
+    -webkit-line-clamp: 2;
+    font-weight: 300;
     overflow: hidden;
     vertical-align: top;
-    font-weight: 600;
-    }
+}
+
+.restaurantPost-item_content .deskripsi {
+    margin-top: 8px;
+}
     
-.details {
-    position:relative;
-    right: 0;
-    width: 90px;
-    height: 44px;
-    margin: 0 16px 16px 16px;
-    background-color: transparent;
-    font-size: 14px;
-    font-weight: bold;
-    color: #424242;
-    align-self: flex-end;
-    background-color: #ffd56b;
-    border-style: none;
-    border-radius: 5px;
-    cursor:pointer;
-    }
-
-.details:hover {
-    background-color: transparent;
-    border-style: solid;
-    border-color:  #ffd56b;
-    }
-
-.restaurantPost-item:hover > .restaurantPost-item_content > .deskripsi {
+.restaurantPost-item:hover >.restaurantPost-item_content_button > .restaurantPost-item_content > .deskripsi {
     display: block;
     overflow: visible;
     height: fit-content;
+}
+
+.restaurantAwards {
+    width: 70%;
+    text-align: center;
+    margin-top: 36px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 36px;
+}
+
+.restaurantAward-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
 }
 
 .deskripsi_new {
@@ -321,158 +406,253 @@ article {
 /*Testimoni*/
 
 .Testimony_thumbnail {
-    height: 400px;
-    width: 100%;
+    max-height: 243px;
+    max-width: 234px;
     position: relative;
     overflow: hidden;
-}
-
-#chef {
-    background-color: #ffd56b;
+    background-color: #eeeeee;
 }
 
 .Testimony_thumbnail > img {
-    max-height: 100%;
-    width: 130%;
-    position: absolute;
+    max-width: 100%;
     object-fit: cover;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
-.Testimony_content {
-    margin: 16px;
-    font-weight: 600;
-    text-align: center;
+.nextButton {
+    height: 44px;
+    width: 44px;
+    color: #5e544b;
+    background: none;
+    border-style: none;
+    cursor: pointer;
+    align-self: center;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 /*detail page*/
-.contentDetail {
-    margin: 0 16px;
-    text-align: left;
-    position: relative;
+.restaurantNameandButton{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
 }
 
-#content_titleDetail {
-    margin: 32px 0 16px;
+.kategori {
+    margin-top: 4px;
+}
+
+.pictureDetailandAdressContainer {
+    display: block;
+    width: 100%;
+}
+
+.restaurantMenu {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 #restaurantReview {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: block;
 }
 
 #detailContainer {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 100%;
     border-radius: 5px;
+    margin-top: 32px;
     text-align: left;
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 #restaurantPost-item_contentDetail {
-    padding: 16px;
+    padding: 0 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .restaurantPoster {
     object-fit: cover;
-    min-width: 60%;
+    background-color:#eeeeee;
+    width: 100%;
+    max-height: 370px;
+    height: auto;
 }
 
 .subHeadDetail {
+    font-family: 'Lato', sans-serif;
     font-weight: 500;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 28.43px;
     line-height: 100%;
+    color: #AB7949;
 }
 
-.deskripsiDetail {
-    margin: 4px 0 16px;
-    font-size: 14px;
-    line-height: 1.5em;
-    
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 21.3px;
+    line-height: 100%;
+}
+.reviewandName{
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.reviewandName h3 {
+    text-align: right;
+    margin-top: 8px;
+}
+
+.testimoni {
+    margin-top: 36px;
 }
 
 #deskripsiContainer {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
-    border-radius: 5px;
-    padding: 32px 16px 16px;
     margin-top: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.pictureDetailandAdressContainer .alamat {
+    margin-top: 16px;
+}
+
+.menu .line_content_title {
+    margin-top: 8px;
+}
+
+.testimoni .line_content_title {
+    margin-top: 8px;
+}
+
+.makanan {
+    overflow-x: hidden;
+    margin-right: 16px;
+}
+
+.minuman {
+    overflow-x: hidden;
+    margin-right: 16px;
+}
+
+.daftar__makanan {
+    margin-top: 8px;
+}
+
+.daftar__minuman {
+    margin-top: 8px;
+}
+
+.lineWrapper {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.menuDetail {
+    position: relative;
+    display: contents;
+    z-index: 1;
+}
+
+.dot {
+    position: absolute;
+    display: inline-block;
+    z-index: 0;
+    bottom: 0;
+}
+
 .review {
-    margin: 16px 0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    padding: 16px;
+    padding: 0 52px;
+}
+
+.review .alamat {
+    margin-top: 0;
 }
 
 /*button*/
 .like {
-    font-size: 18px;
+    font-size: 16px;
     position: relative;
-    background-color: #ffd56b;
-    color: #db0000;
-    width: 55px;
-    height: 55px;
+    color: #AB7949;
+    background-color: transparent;
+    height: 44px;
+    padding: 0 12px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 55px;
-    border-style: none;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-style: solid;
+    border-color: #AB7949;
+}
+
+.like i {
+    margin-right: 8px;
+    color: #AB7949;
 }
 
 .add {
-    font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+    font-size: 16px;
     position: relative;
-    background-color: #ffd56b;
+    background-color: transparent;
     color: black;
-    height: 55px;
+    height: 44px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px;
-    letter-spacing: 0.1em;
-    border-radius: 55px;
-    border-style: none;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 0 12px;
+    border-style: solid;
+    border-color: #AB7949;
+}
+
+.add .plusIcon {
+    margin-right: 4px;
+    font-size: 28px;
+    font-weight: 300;
+    color: #AB7949;
+}
+
+.add p {
+    color: #AB7949
+}
+
+.add:hover .plusIcon {
+  color: #ffffff;
+}
+
+.add:hover p {
+    color: #ffffff;
+}
+
+.like:hover i {
+    color: #ffffff;
 }
 
 .add:hover {
-    background-color: black;
+    background-color: #AB7949;
     color:#ffffff;
 }
 
 .like:hover {
-    background-color: black;
-    color:#db0000;
+    background-color: #AB7949;
+    color:#ffffff;
 }
 
 #likeButtonContainer {
-    width: 55px;
-    height: 55px;
+    height: 44px;
+    margin-right: 16px;
 }
 
 #addReviewButtonContainer {
-    height: 55px;
-    margin-right: 32px;
+    height: 44px;
 }
 
 #buttonContainer {
     display: flex;
     position: sticky;
-    bottom: 32px;
-    right: 32px;
     justify-content: flex-end;
 }
 /* input Review floating page*/
@@ -480,7 +660,7 @@ article {
   height: 100%;
   width: 100%;
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top */
   left: 0;
   top: 0;
   background-color: rgb(0,0,0); /* Black fallback color */
@@ -496,11 +676,10 @@ article {
 
 #formcontainer {
     position: relative;
-    background-color: #ffd56b;
+    background-color: #AB7949;
     width: 634px;
     height: 70%;
     padding: 32px;
-    
 }
 
 .inputContainer {
@@ -514,9 +693,10 @@ label input {
 }
 
 label {
-    font-size: 24px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+    font-size: 21.3px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    color: white;
 }
 
 .input {
@@ -525,7 +705,7 @@ label {
     background-color: #ffffff;
     margin: 8px 0 16px;
     text-indent: 12px;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 #submit {
@@ -535,29 +715,26 @@ label {
     margin-bottom: 16px;
     height: 44px;
     cursor: pointer;
-    border-radius: 44px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
     letter-spacing: 0.1em;
 }
 
-.inputBtn {
+.testBtn {
     border-style: solid;
-    border-color: black;
+    border: none;
     background-color: #ffffff;
     color: black;
     margin-bottom: 16px;
     height: 44px;
     cursor: pointer;
-    border-radius: 44px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: 14px;
     letter-spacing: 0.1em;
 }
 
-.inputBtn:hover {
+.testBtn:hover {
     border-style: none;
     background-color: black;
     color: #ffffff;
@@ -572,11 +749,11 @@ label {
 
 /*footer*/
 footer {
-    background-color: #ffd56b;
+    background-color: transparent;
+    border-top: 2px solid #AB7949;
     padding: 2em;
-    width: 100%;
     text-align: center;
-    margin-top: 32px;
+    margin: 32px 100px 0;
 }
 
 .skeleton {
@@ -585,3 +762,106 @@ footer {
     color: #eeeeee;
     pointer-events: none;
 }
+
+/* Pengaturan untuk tampilan carousel */
+.splide__arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    height:36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+}
+
+.restaurantAwardsContainer .splide .splide__track{
+    width: 61vw;
+}
+
+.splide__slide .restaurantPost-item .name {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.splide__slide .restaurantPost-item .alamat {
+    margin-top: 8px;
+}
+
+.splide__arrow--prev {
+    left: 0;
+}
+    
+.splide__arrow--next {
+    right: 0;
+}
+
+.splide__arrow svg {
+    width: 24px;
+    height: 24px;
+    filter: invert(48%) sepia(47%) saturate(490%) hue-rotate(348deg) brightness(95%) contrast(84%);
+}
+    
+.splide__arrow--prev svg {
+    transform: scaleX(-1);
+}
+
+.splide--draggable>.splide__track>.splide__list>.splide__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+li .restaurantPost-item {
+    width: fit-content;
+}
+
+.aboutSplide {
+    margin-top: 24px;
+}
+
+
+#one .splide__pagination {
+    margin-top: 16px;
+}
+
+#one .splide__track ul {
+    width: auto;
+    height: 100%;
+}
+
+#one .splide__track ul .splide__slide{
+    max-height: 390px;
+    background-color: #eeeeee;
+}
+
+#one ul li .splide__pagination__page  {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #AB7949;
+    border-radius: 50%;
+    margin: 3px;
+    padding: 0;
+    transition: transform .2s linear;
+    border: none;
+    opacity: 50%;
+}
+
+#one ul li .is-active {
+    opacity: 100%;
+}
+
+#two {
+   display: flex;
+   justify-content: center;
+   margin-top: 16px;
+}
+
+#three {
+    margin-top: 16px;
+}
+
